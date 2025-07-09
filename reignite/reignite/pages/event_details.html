@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tai Chi in the Park - Event Details - Reignite</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Freignite2851back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header -->
+    <header class="bg-surface border-b border-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Back Button & Title -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="history.back()" class="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden sm:block">
+                        <h1 class="text-lg sm:text-xl font-heading font-semibold text-text-primary">Event Details</h1>
+                    </div>
+                </div>
+                
+                <!-- Logo (Mobile Center) -->
+                <div class="flex items-center sm:hidden">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-heading font-bold text-text-primary">Reignite</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Logo -->
+                <div class="hidden sm:flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-heading font-bold text-text-primary">Reignite</span>
+                    </a>
+                </div>
+                
+                <!-- Share Button -->
+                <div class="flex items-center space-x-2">
+                    <button id="shareBtn" class="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200" title="Share event">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+            <!-- Left Column - Main Content -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Event Image -->
+                <div class="relative overflow-hidden rounded-xl">
+                    <img src="https://images.pexels.com/photos/7592474/pexels-photo-7592474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Seniors practicing Tai Chi in East Coast Park" class="w-full h-64 sm:h-80 object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <!-- Event Key Details Overlay -->
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <div class="text-white space-y-2">
+                            <h1 class="text-2xl sm:text-3xl font-heading font-bold">Tai Chi in the Park</h1>
+                            <div class="flex flex-wrap items-center gap-4 text-sm sm:text-base">
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                    </svg>
+                                    <span>Wed, 10 Jul 2025</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span>7:00 AM - 8:30 AM</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>East Coast Park</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Description -->
+                <div class="bg-surface rounded-xl border border-border p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary">About This Event</h2>
+                        <button id="voiceReadBtn" class="voice-button p-3" title="Listen to description">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="eventDescription" class="text-lg text-text-primary leading-relaxed space-y-4">
+                        <p>Join our gentle morning Tai Chi session at the beautiful East Coast Park! This beginner-friendly class is perfect for seniors looking to improve balance, flexibility, and overall well-being in a peaceful outdoor setting.</p>
+                        <p>Our certified instructor, Master Chen Wei Ming, has over 20 years of experience teaching Tai Chi specifically to seniors. The session focuses on slow, flowing movements that are easy on the joints while providing excellent health benefits.</p>
+                        <p>What to expect:</p>
+                        <ul class="list-disc list-inside space-y-2 ml-4">
+                            <li>Gentle warm-up exercises</li>
+                            <li>Basic Tai Chi forms and movements</li>
+                            <li>Breathing techniques for relaxation</li>
+                            <li>Cool-down and meditation</li>
+                        </ul>
+                        <p>All fitness levels welcome! Bring a water bottle and wear comfortable clothing. Mats will be provided.</p>
+                    </div>
+                </div>
+
+                <!-- Location Details -->
+                <div class="bg-surface rounded-xl border border-border p-6">
+                    <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary mb-4">Location & Directions</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-text-primary">East Coast Park</p>
+                                <p class="text-text-secondary">Area C, Near Playground 1</p>
+                                <p class="text-text-secondary">East Coast Park Service Road, Singapore 449876</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Placeholder -->
+                        <div class="bg-gray-100 rounded-lg h-48 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-gray-400 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <p class="text-gray-500">Interactive Map</p>
+                                <button class="text-primary hover:text-primary-700 text-sm mt-1">View in Google Maps</button>
+                            </div>
+                        </div>
+
+                        <!-- Transportation -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6.85c.52-.5 2.06-1.85 6-1.85s5.48 1.35 6 1.85V11z"/>
+                                </svg>
+                                <div>
+                                    <p class="font-semibold text-blue-800">By Car</p>
+                                    <p class="text-sm text-blue-600">Free parking available</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <div>
+                                    <p class="font-semibold text-green-800">By Bus</p>
+                                    <p class="text-sm text-green-600">Bus 196, 197 to Marine Parade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility Features -->
+                <div class="bg-surface rounded-xl border border-border p-6">
+                    <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary mb-4">Accessibility Features</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-green-800">Wheelchair Accessible</p>
+                                <p class="text-sm text-green-600">Paved pathways and accessible facilities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-green-800">Seating Available</p>
+                                <p class="text-sm text-green-600">Benches for rest breaks</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-green-800">Nearby Restrooms</p>
+                                <p class="text-sm text-green-600">Clean facilities within 100m</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-green-800">Shaded Area</p>
+                                <p class="text-sm text-green-600">Protection from sun and rain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Reviews -->
+                <div class="bg-surface rounded-xl border border-border p-6">
+                    <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary mb-6">Community Reviews</h2>
+                    <div class="space-y-6">
+                        <!-- Review 1 -->
+                        <div class="border-b border-border-light pb-6 last:border-b-0 last:pb-0">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Margaret Lim" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="font-semibold text-text-primary">Margaret Lim</h4>
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm text-text-secondary">• 2 days ago</span>
+                                    </div>
+                                    <p class="text-text-primary">Wonderful session! Master Chen is very patient and explains each movement clearly. The morning air at East Coast Park is so refreshing. I've been attending for 3 months and feel much more balanced.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="border-b border-border-light pb-6 last:border-b-0 last:pb-0">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://images.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg" alt="Robert Tan" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="font-semibold text-text-primary">Robert Tan</h4>
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm text-text-secondary">• 1 week ago</span>
+                                    </div>
+                                    <p class="text-text-primary">Great for beginners like me. The location is perfect with good parking. Only wish the session was a bit longer, but I understand it's designed for our age group. Highly recommend!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Events (Mobile) -->
+                <div class="lg:hidden bg-surface rounded-xl border border-border p-6">
+                    <h2 class="text-xl font-heading font-semibold text-text-primary mb-4">Similar Events</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-3 border border-border rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Morning Yoga" class="w-16 h-16 rounded-lg object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">Morning Yoga</h3>
+                                <p class="text-sm text-text-secondary">Thu, 11 Jul • 8:00 AM</p>
+                                <p class="text-sm text-text-secondary">Bedok Reservoir Park</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-3 border border-border rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                            <img src="https://images.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg" alt="Aqua Aerobics" class="w-16 h-16 rounded-lg object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">Aqua Aerobics</h3>
+                                <p class="text-sm text-text-secondary">Fri, 12 Jul • 9:00 AM</p>
+                                <p class="text-sm text-text-secondary">Jurong Swimming Complex</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Desktop -->
+            <div class="hidden lg:block lg:col-span-1 space-y-6">
+                <!-- Enrollment Card -->
+                <div class="bg-surface rounded-xl border border-border p-6 sticky top-24">
+                    <div class="space-y-6">
+                        <!-- Pricing -->
+                        <div class="text-center">
+                            <div class="text-3xl font-heading font-bold text-text-primary">FREE</div>
+                            <p class="text-text-secondary">Community sponsored event</p>
+                        </div>
+
+                        <!-- Available Spots -->
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-800 font-semibold">Available Spots</span>
+                                <span class="text-green-600 font-bold">8 of 20</span>
+                            </div>
+                            <div class="w-full bg-green-200 rounded-full h-2 mt-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Enrollment Requirements -->
+                        <div class="space-y-3">
+                            <h3 class="font-semibold text-text-primary">Requirements</h3>
+                            <ul class="space-y-2 text-sm text-text-secondary">
+                                <li class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span>Age 50 and above</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span>No prior experience needed</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span>Bring water bottle</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Enroll Button -->
+                        <button id="enrollBtn" class="w-full btn-primary text-lg py-4 flex items-center justify-center space-x-2">
+                            <span id="enrollText">Enroll Now</span>
+                            <svg id="enrollLoader" class="w-5 h-5 animate-spin hidden" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.364-7.364l-2.828 2.828M9.464 9.464L6.636 6.636m12.728 12.728l-2.828-2.828M9.464 14.536l-2.828 2.828"/>
+                            </svg>
+                        </button>
+
+                        <!-- Cancellation Policy -->
+                        <div class="text-xs text-text-secondary">
+                            <p class="font-semibold mb-1">Cancellation Policy:</p>
+                            <p>Free cancellation up to 2 hours before the event starts. No-show policy applies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Organizer -->
+                <div class="bg-surface rounded-xl border border-border p-6">
+                    <h3 class="font-semibold text-text-primary mb-4">Contact Organizer</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Master Chen Wei Ming" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div>
+                                <p class="font-semibold text-text-primary">Master Chen Wei Ming</p>
+                                <p class="text-sm text-text-secondary">Certified Tai Chi Instructor</p>
+                            </div>
+                        </div>
+                        <button class="w-full btn-outline py-3 flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <span>Call +65 9123 4567</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Related Events -->
+                <div class="bg-surface rounded-xl border border-border p-6">
+                    <h3 class="font-semibold text-text-primary mb-4">Similar Events</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 p-3 border border-border rounded-lg hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Morning Yoga" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-text-primary text-sm">Morning Yoga</h4>
+                                <p class="text-xs text-text-secondary">Thu, 11 Jul • 8:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 border border-border rounded-lg hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
+                            <img src="https://images.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg" alt="Aqua Aerobics" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-text-primary text-sm">Aqua Aerobics</h4>
+                                <p class="text-xs text-text-secondary">Fri, 12 Jul • 9:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Enrollment Button -->
+        <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-surface border-t border-border p-4">
+            <div class="flex items-center justify-between mb-3">
+                <div>
+                    <div class="text-2xl font-heading font-bold text-text-primary">FREE</div>
+                    <div class="text-sm text-text-secondary">8 spots remaining</div>
+                </div>
+                <button id="mobileEnrollBtn" class="btn-primary px-8 py-3 text-lg">
+                    Enroll Now
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-surface rounded-xl p-8 max-w-md mx-4 text-center">
+            <div class="w-16 h-16 bg-success rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">Enrollment Successful!</h3>
+            <p class="text-text-secondary mb-6">You've been enrolled in Tai Chi in the Park. Check your email for confirmation details.</p>
+            <div class="space-y-3">
+                <button onclick="window.location.href='my_enrolled_events.html'" class="btn-primary w-full">
+                    View My Events
+                </button>
+                <button onclick="closeModal()" class="btn-outline w-full">
+                    Continue Browsing
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="lg:hidden fixed bottom-20 left-0 right-0 bg-surface border-t border-border">
+        <div class="flex justify-around py-2">
+            <a href="homepage.html" class="flex flex-col items-center py-2 px-3 text-text-secondary hover:text-primary">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="community_forum.html" class="flex flex-col items-center py-2 px-3 text-text-secondary hover:text-primary">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1h.5c.2 0 .5-.1.7-.3L14.5 18H20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                </svg>
+                <span class="text-xs mt-1">Forum</span>
+            </a>
+            <a href="my_enrolled_events.html" class="flex flex-col items-center py-2 px-3 text-text-secondary hover:text-primary">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                </svg>
+                <span class="text-xs mt-1">My Events</span>
+            </a>
+            <a href="wellness_resources.html" class="flex flex-col items-center py-2 px-3 text-text-secondary hover:text-primary">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <span class="text-xs mt-1">Wellness</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="../js/voice-assistant.js"></script>
+    <script>
+        // Voice assistant functionality
+        document.getElementById('voiceReadBtn').addEventListener('click', function() {
+            if (window.voiceAssistant) {
+                // Use the enhanced voice assistant instead of basic speech synthesis
+                const description = document.getElementById('eventDescription').innerText;
+                window.voiceAssistant.readText(description);
+                
+                // Visual feedback
+                this.style.backgroundColor = '#059669';
+                this.style.color = 'white';
+                
+                // Reset visual feedback when speech ends
+                const resetButton = () => {
+                    this.style.backgroundColor = '#2563EB';
+                    this.style.color = 'white';
+                };
+                
+                // Check if speech is still ongoing and reset when done
+                const checkSpeech = () => {
+                    if (!window.voiceAssistant.isCurrentlySpeaking()) {
+                        resetButton();
+                    } else {
+                        setTimeout(checkSpeech, 500);
+                    }
+                };
+                setTimeout(checkSpeech, 1000);
+            } else {
+                // Fallback to basic speech synthesis
+                const description = document.getElementById('eventDescription').innerText;
+                
+                if ('speechSynthesis' in window) {
+                    speechSynthesis.cancel();
+                    
+                    const utterance = new SpeechSynthesisUtterance(description);
+                    utterance.rate = 0.8;
+                    utterance.pitch = 1;
+                    utterance.volume = 1;
+                    
+                    this.style.backgroundColor = '#059669';
+                    this.style.color = 'white';
+                    
+                    utterance.onend = () => {
+                        this.style.backgroundColor = '#2563EB';
+                        this.style.color = 'white';
+                    };
+                    
+                    speechSynthesis.speak(utterance);
+                } else {
+                    alert('Voice reading is not supported in your browser.');
+                }
+            }
+        });
+
+        // Enhanced enrollment functionality with voice feedback
+        function handleEnrollment(buttonId, textId, loaderId) {
+            const button = document.getElementById(buttonId);
+            const text = document.getElementById(textId);
+            const loader = document.getElementById(loaderId);
+            
+            if (button && text && loader) {
+                if (window.voiceAssistant) {
+                    window.voiceAssistant.speak("Processing your enrollment. Please wait.");
+                }
+                
+                text.textContent = 'Enrolling...';
+                loader.classList.remove('hidden');
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    text.textContent = 'Enroll Now';
+                    loader.classList.add('hidden');
+                    button.disabled = false;
+                    document.getElementById('successModal').classList.remove('hidden');
+                    
+                    if (window.voiceAssistant) {
+                        window.voiceAssistant.speak("Enrollment successful! You have been enrolled in this event.");
+                    }
+                }, 2000);
+            }
+        }
+
+        // Desktop enrollment
+        document.getElementById('enrollBtn').addEventListener('click', function() {
+            handleEnrollment('enrollBtn', 'enrollText', 'enrollLoader');
+        });
+
+        // Mobile enrollment
+        document.getElementById('mobileEnrollBtn').addEventListener('click', function() {
+            if (window.voiceAssistant) {
+                window.voiceAssistant.speak("Enrollment successful! You have been enrolled in this event.");
+            }
+            document.getElementById('successModal').classList.remove('hidden');
+        });
+
+        // Enhanced share functionality with voice feedback
+        document.getElementById('shareBtn').addEventListener('click', function() {
+            if (window.voiceAssistant) {
+                window.voiceAssistant.speak("Sharing event details");
+            }
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Tai Chi in the Park - Reignite',
+                    text: 'Join our gentle morning Tai Chi session at East Coast Park!',
+                    url: window.location.href
+                }).then(() => {
+                    if (window.voiceAssistant) {
+                        window.voiceAssistant.speak("Event shared successfully");
+                    }
+                }).catch(() => {
+                    if (window.voiceAssistant) {
+                        window.voiceAssistant.speak("Sharing was cancelled");
+                    }
+                });
+            } else {
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    if (window.voiceAssistant) {
+                        window.voiceAssistant.speak("Event link copied to clipboard");
+                    } else {
+                        alert('Event link copied to clipboard!');
+                    }
+                });
+            }
+        });
+
+        // Close modal function with voice feedback
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            if (window.voiceAssistant) {
+                window.voiceAssistant.speak("Modal closed");
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Enhanced page initialization with voice support
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add padding to body for mobile bottom navigation
+            if (window.innerWidth < 1024) {
+                document.body.style.paddingBottom = '140px';
+            }
+            
+            // Announce page readiness with voice assistant
+            setTimeout(() => {
+                if (window.voiceAssistant && window.voiceAssistant.isSupported) {
+                    console.log('Event details loaded. You can use voice commands like "read this" to hear the event description.');
+                }
+            }, 1000);
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth < 1024) {
+                document.body.style.paddingBottom = '140px';
+            } else {
+                document.body.style.paddingBottom = '0';
+            }
+        });
+    </script>
+</body>
+</html>

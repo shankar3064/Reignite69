@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Reignite Community Hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Freignite2851back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header -->
+    <header class="bg-surface border-b border-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl sm:text-2xl font-heading font-bold text-text-primary">Reignite</span>
+                    </a>
+                </div>
+                
+                <!-- Sign In Link -->
+                <div class="flex items-center">
+                    <span class="text-text-secondary text-sm sm:text-base mr-2">Already have an account?</span>
+                    <a href="homepage.html" class="text-primary hover:text-primary-700 font-semibold text-sm sm:text-base transition-colors duration-200">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <!-- Welcome Section -->
+        <div class="text-center mb-8 sm:mb-12">
+            <h1 class="text-3xl sm:text-4xl font-heading font-bold text-text-primary mb-4">
+                Join the Reignite Community
+            </h1>
+            <p class="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
+                Connect with fellow seniors, discover exciting events, and access wellness resources in Singapore
+            </p>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="bg-surface rounded-xl shadow-lg border border-border p-6 sm:p-8">
+            <form id="registrationForm" class="space-y-6 sm:space-y-8">
+                <!-- Personal Information Section -->
+                <div class="space-y-6">
+                    <div class="border-b border-border-light pb-4">
+                        <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary mb-2">
+                            Personal Information
+                        </h2>
+                        <p class="text-text-secondary">Tell us a bit about yourself</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Full Name -->
+                        <div class="space-y-2">
+                            <label for="fullName" class="block text-lg font-semibold text-text-primary">
+                                Full Name *
+                            </label>
+                            <div class="relative">
+                                <input type="text" id="fullName" name="fullName" class="form-input text-lg" placeholder="Enter your full name" required value="Mary Tan Wei Ling" />
+                                <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 voice-button p-2" title="Voice input">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                                        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="fullNameError" class="text-error text-sm hidden">Please enter your full name</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="space-y-2">
+                            <label for="email" class="block text-lg font-semibold text-text-primary">
+                                Email Address *
+                            </label>
+                            <div class="relative">
+                                <input type="email" id="email" name="email" class="form-input text-lg" placeholder="your.email@example.com" required value="mary.tan@email.com" />
+                                <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 voice-button p-2" title="Voice input">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                                        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="emailError" class="text-error text-sm hidden">Please enter a valid email address</div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="space-y-2">
+                            <label for="phone" class="block text-lg font-semibold text-text-primary">
+                                Phone Number *
+                            </label>
+                            <div class="relative">
+                                <input type="tel" id="phone" name="phone" class="form-input text-lg" placeholder="+65 9123 4567" required value="+65 9876 5432" />
+                                <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 voice-button p-2" title="Voice input">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                                        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="phoneError" class="text-error text-sm hidden">Please enter a valid Singapore phone number</div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="space-y-2">
+                            <label for="dateOfBirth" class="block text-lg font-semibold text-text-primary">
+                                Date of Birth *
+                            </label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input text-lg" required value="1955-03-15" />
+                            <div id="dobError" class="text-error text-sm hidden">Please enter your date of birth</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password Section -->
+                <div class="space-y-6">
+                    <div class="border-b border-border-light pb-4">
+                        <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary mb-2">
+                            Create Password
+                        </h2>
+                        <p class="text-text-secondary">Choose a secure password for your account</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Password -->
+                        <div class="space-y-2">
+                            <label for="password" class="block text-lg font-semibold text-text-primary">
+                                Password *
+                            </label>
+                            <div class="relative">
+                                <input type="password" id="password" name="password" class="form-input text-lg pr-12" placeholder="Create a strong password" required value="SecurePass123!" />
+                                <button type="button" id="togglePassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Password Strength Indicator -->
+                            <div class="space-y-2">
+                                <div class="flex space-x-1">
+                                    <div id="strength1" class="h-2 w-full bg-gray-200 rounded transition-colors duration-200"></div>
+                                    <div id="strength2" class="h-2 w-full bg-gray-200 rounded transition-colors duration-200"></div>
+                                    <div id="strength3" class="h-2 w-full bg-gray-200 rounded transition-colors duration-200"></div>
+                                    <div id="strength4" class="h-2 w-full bg-gray-200 rounded transition-colors duration-200"></div>
+                                </div>
+                                <p id="strengthText" class="text-sm text-text-secondary">Password strength: Strong</p>
+                            </div>
+
+                            <!-- Password Requirements -->
+                            <div class="space-y-1 text-sm">
+                                <div id="req-length" class="flex items-center space-x-2 text-success">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                    <span>At least 8 characters</span>
+                                </div>
+                                <div id="req-upper" class="flex items-center space-x-2 text-success">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                    <span>One uppercase letter</span>
+                                </div>
+                                <div id="req-lower" class="flex items-center space-x-2 text-success">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                    <span>One lowercase letter</span>
+                                </div>
+                                <div id="req-number" class="flex items-center space-x-2 text-success">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                    <span>One number</span>
+                                </div>
+                                <div id="req-special" class="flex items-center space-x-2 text-success">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                    <span>One special character</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="space-y-2">
+                            <label for="confirmPassword" class="block text-lg font-semibold text-text-primary">
+                                Confirm Password *
+                            </label>
+                            <div class="relative">
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-input text-lg pr-12" placeholder="Confirm your password" required value="SecurePass123!" />
+                                <button type="button" id="toggleConfirmPassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="confirmPasswordError" class="text-error text-sm hidden">Passwords do not match</div>
+                            <div id="confirmPasswordSuccess" class="text-success text-sm flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span>Passwords match</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility Preferences -->
+                <div class="space-y-6">
+                    <div class="border-b border-border-light pb-4">
+                        <h2 class="text-xl sm:text-2xl font-heading font-semibold text-text-primary mb-2">
+                            Accessibility Preferences
+                        </h2>
+                        <p class="text-text-secondary">Customize your experience for better accessibility</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Font Size Preference -->
+                        <div class="space-y-3">
+                            <label class="block text-lg font-semibold text-text-primary">
+                                Preferred Font Size
+                            </label>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="fontSize" value="normal" class="w-5 h-5 text-primary" />
+                                    <span class="text-base">Normal (16px)</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="fontSize" value="large" class="w-5 h-5 text-primary" checked />
+                                    <span class="text-lg">Large (18px)</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="fontSize" value="extra-large" class="w-5 h-5 text-primary" />
+                                    <span class="text-xl">Extra Large (20px)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Voice Assistant -->
+                        <div class="space-y-3">
+                            <label class="block text-lg font-semibold text-text-primary">
+                                Voice Assistant
+                            </label>
+                            <div class="space-y-3">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" name="voiceAssistant" class="w-5 h-5 text-primary rounded" checked />
+                                    <span>Enable voice input for forms</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" name="voiceNavigation" class="w-5 h-5 text-primary rounded" />
+                                    <span>Enable voice navigation</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Wheelchair Accessibility -->
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-3 cursor-pointer">
+                                <input type="checkbox" name="wheelchairAccess" class="w-5 h-5 text-primary rounded" checked />
+                                <span class="text-lg font-semibold text-text-primary">Show wheelchair accessible events only</span>
+                            </label>
+                            <p class="text-text-secondary text-sm ml-8">We'll prioritize events with wheelchair accessibility</p>
+                        </div>
+
+                        <!-- High Contrast -->
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-3 cursor-pointer">
+                                <input type="checkbox" name="highContrast" class="w-5 h-5 text-primary rounded" />
+                                <span class="text-lg font-semibold text-text-primary">Enable high contrast mode</span>
+                            </label>
+                            <p class="text-text-secondary text-sm ml-8">Improves text readability with enhanced contrast</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="space-y-4">
+                    <div class="border-t border-border-light pt-6">
+                        <label class="flex items-start space-x-3 cursor-pointer">
+                            <input type="checkbox" name="terms" class="w-5 h-5 text-primary rounded mt-1" required checked />
+                            <div class="text-text-secondary">
+                                <span>I agree to the </span>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 underline">Terms of Service</a>
+                                <span> and </span>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 underline">Privacy Policy</a>
+                                <span>, and consent to receiving community updates and event notifications.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-6">
+                    <button type="submit" id="submitBtn" class="w-full btn-primary text-lg py-4 flex items-center justify-center space-x-2">
+                        <span id="submitText">Create Account</span>
+                        <svg id="submitLoader" class="w-5 h-5 animate-spin hidden" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.364-7.364l-2.828 2.828M9.464 9.464L6.636 6.636m12.728 12.728l-2.828-2.828M9.464 14.536l-2.828 2.828"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Trust Signals -->
+        <div class="mt-12 text-center">
+            <div class="bg-surface rounded-lg border border-border p-6">
+                <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">
+                    Trusted by Singapore Seniors
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Community Center" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="text-left">
+                            <p class="font-semibold text-text-primary">Toa Payoh Hub</p>
+                            <p class="text-sm text-text-secondary">Community Partner</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Senior Activity Center" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="text-left">
+                            <p class="font-semibold text-text-primary">Jurong West 505</p>
+                            <p class="text-sm text-text-secondary">Active Aging Center</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg" alt="Wellness Center" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="text-left">
+                            <p class="font-semibold text-text-primary">Bedok Wellness Hub</p>
+                            <p class="text-sm text-text-secondary">Health Partner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-surface rounded-xl p-8 max-w-md mx-4 text-center">
+            <div class="w-16 h-16 bg-success rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">Account Created Successfully!</h3>
+            <p class="text-text-secondary mb-6">Welcome to the Reignite community. Please check your email to verify your account.</p>
+            <button onclick="window.location.href='homepage.html'" class="btn-primary w-full">
+                Continue to Homepage
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Form validation and interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const submitLoader = document.getElementById('submitLoader');
+            const successModal = document.getElementById('successModal');
+
+            // Password toggle functionality
+            const togglePassword = document.getElementById('togglePassword');
+            const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirmPassword');
+
+            togglePassword.addEventListener('click', function() {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+            });
+
+            toggleConfirmPassword.addEventListener('click', function() {
+                const type = confirmPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                confirmPasswordField.setAttribute('type', type);
+            });
+
+            // Password strength validation
+            passwordField.addEventListener('input', function() {
+                validatePasswordStrength(this.value);
+            });
+
+            // Confirm password validation
+            confirmPasswordField.addEventListener('input', function() {
+                validatePasswordMatch();
+            });
+
+            function validatePasswordStrength(password) {
+                const requirements = {
+                    length: password.length >= 8,
+                    upper: /[A-Z]/.test(password),
+                    lower: /[a-z]/.test(password),
+                    number: /\d/.test(password),
+                    special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+                };
+
+                // Update requirement indicators
+                Object.keys(requirements).forEach(req => {
+                    const element = document.getElementById(`req-${req}`);
+                    if (requirements[req]) {
+                        element.className = element.className.replace('text-text-secondary', 'text-success');
+                    } else {
+                        element.className = element.className.replace('text-success', 'text-text-secondary');
+                    }
+                });
+
+                // Update strength bars
+                const strength = Object.values(requirements).filter(Boolean).length;
+                const strengthBars = ['strength1', 'strength2', 'strength3', 'strength4'];
+                const strengthText = document.getElementById('strengthText');
+
+                strengthBars.forEach((bar, index) => {
+                    const element = document.getElementById(bar);
+                    if (index < strength) {
+                        if (strength <= 2) {
+                            element.className = element.className.replace('bg-gray-200', 'bg-error');
+                        } else if (strength <= 3) {
+                            element.className = element.className.replace('bg-gray-200', 'bg-warning');
+                        } else {
+                            element.className = element.className.replace('bg-gray-200', 'bg-success');
+                        }
+                    } else {
+                        element.className = element.className.replace(/bg-(error|warning|success)/, 'bg-gray-200');
+                    }
+                });
+
+                // Update strength text
+                if (strength <= 2) {
+                    strengthText.textContent = 'Password strength: Weak';
+                    strengthText.className = 'text-sm text-error';
+                } else if (strength <= 3) {
+                    strengthText.textContent = 'Password strength: Medium';
+                    strengthText.className = 'text-sm text-warning';
+                } else {
+                    strengthText.textContent = 'Password strength: Strong';
+                    strengthText.className = 'text-sm text-success';
+                }
+            }
+
+            function validatePasswordMatch() {
+                const password = passwordField.value;
+                const confirmPassword = confirmPasswordField.value;
+                const errorElement = document.getElementById('confirmPasswordError');
+                const successElement = document.getElementById('confirmPasswordSuccess');
+
+                if (confirmPassword && password !== confirmPassword) {
+                    errorElement.classList.remove('hidden');
+                    successElement.classList.add('hidden');
+                } else if (confirmPassword && password === confirmPassword) {
+                    errorElement.classList.add('hidden');
+                    successElement.classList.remove('hidden');
+                } else {
+                    errorElement.classList.add('hidden');
+                    successElement.classList.add('hidden');
+                }
+            }
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                submitText.textContent = 'Creating Account...';
+                submitLoader.classList.remove('hidden');
+                submitBtn.disabled = true;
+
+                // Simulate API call
+                setTimeout(() => {
+                    submitText.textContent = 'Create Account';
+                    submitLoader.classList.add('hidden');
+                    submitBtn.disabled = false;
+                    successModal.classList.remove('hidden');
+                }, 2000);
+            });
+
+            // Voice assistant simulation
+            document.querySelectorAll('.voice-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Simulate voice input
+                    this.style.backgroundColor = '#059669';
+                    setTimeout(() => {
+                        this.style.backgroundColor = '#2563EB';
+                    }, 1000);
+                });
+            });
+
+            // Initialize password strength for pre-filled password
+            validatePasswordStrength(passwordField.value);
+            validatePasswordMatch();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Enrolled Events - Reignite Community Hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Freignite2851back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header -->
+    <header class="bg-surface border-b border-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl sm:text-2xl font-heading font-bold text-text-primary">Reignite</span>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="event_details.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Events</a>
+                    <a href="community_forum.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Community</a>
+                    <a href="wellness_resources.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Wellness</a>
+                    <a href="my_enrolled_events.html" class="text-primary font-semibold">My Events</a>
+                </nav>
+
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Notifications -->
+                    <button class="relative p-2 text-text-secondary hover:text-primary transition-colors duration-200" title="Notifications">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    </button>
+
+                    <!-- Voice Assistant -->
+                    <button class="voice-button p-2" title="Voice Assistant">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-text-secondary hover:text-primary">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden border-t border-border bg-surface">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="homepage.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Home</a>
+                    <a href="event_details.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Events</a>
+                    <a href="community_forum.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Community</a>
+                    <a href="wellness_resources.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Wellness</a>
+                    <a href="my_enrolled_events.html" class="block px-3 py-2 text-primary font-semibold">My Events</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+                <div>
+                    <h1 class="text-3xl sm:text-4xl font-heading font-bold text-text-primary mb-2">
+                        My Enrolled Events
+                    </h1>
+                    <p class="text-lg text-text-secondary">
+                        Track and manage your community activities
+                    </p>
+                </div>
+                <div class="mt-4 sm:mt-0">
+                    <a href="event_details.html" class="btn-primary inline-flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                        <span>Find New Events</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-surface rounded-lg border border-border p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm font-medium text-text-secondary">Upcoming Events</p>
+                            <p class="text-2xl font-bold text-text-primary">5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-lg border border-border p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm font-medium text-text-secondary">Completed</p>
+                            <p class="text-2xl font-bold text-text-primary">12</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-lg border border-border p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-warning-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm font-medium text-text-secondary">Waitlisted</p>
+                            <p class="text-2xl font-bold text-text-primary">2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-lg border border-border p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm font-medium text-text-secondary">Cancelled</p>
+                            <p class="text-2xl font-bold text-text-primary">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:flex lg:space-x-8">
+            <!-- Filters Sidebar (Desktop) -->
+            <div class="hidden lg:block lg:w-64 lg:flex-shrink-0">
+                <div class="bg-surface rounded-lg border border-border p-6 sticky top-24">
+                    <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Filter Events</h3>
+                    
+                    <!-- Date Filter -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-text-primary mb-2">Date Range</label>
+                        <select class="form-input text-sm">
+                            <option>All Dates</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>Next 3 Months</option>
+                        </select>
+                    </div>
+
+                    <!-- Location Filter -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-text-primary mb-2">Location</label>
+                        <select class="form-input text-sm">
+                            <option>All Locations</option>
+                            <option>Toa Payoh</option>
+                            <option>Jurong West</option>
+                            <option>Bedok</option>
+                            <option>Ang Mo Kio</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Type Filter -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-text-primary mb-2">Event Type</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" checked />
+                                <span class="ml-2 text-sm">Sports</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" checked />
+                                <span class="ml-2 text-sm">Arts & Crafts</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" />
+                                <span class="ml-2 text-sm">Workshops</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" />
+                                <span class="ml-2 text-sm">Social</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Status Filter -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-text-primary mb-2">Status</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" checked />
+                                <span class="ml-2 text-sm">Confirmed</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" />
+                                <span class="ml-2 text-sm">Waitlisted</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-primary rounded" />
+                                <span class="ml-2 text-sm">Cancelled</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline w-full text-sm">Reset Filters</button>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="flex-1">
+                <!-- Mobile Filters -->
+                <div class="lg:hidden mb-6">
+                    <button id="mobileFiltersBtn" class="btn-outline w-full flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                        </svg>
+                        <span>Filters</span>
+                    </button>
+                </div>
+
+                <!-- Upcoming Events Section -->
+                <section class="mb-12">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-heading font-bold text-text-primary">Upcoming Events</h2>
+                        <span class="text-sm text-text-secondary">5 events</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <!-- Event Card 1 -->
+                        <div class="bg-surface rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pexels.com/photos/6975474/pexels-photo-6975474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Morning Tai Chi" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Confirmed</span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <div class="bg-white bg-opacity-90 rounded-lg px-3 py-2 text-center">
+                                        <div class="text-lg font-bold text-text-primary">2</div>
+                                        <div class="text-xs text-text-secondary">days</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-3">
+                                    <h3 class="text-lg font-heading font-semibold text-text-primary">Morning Tai Chi</h3>
+                                    <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs font-medium">Sports</span>
+                                </div>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                        </svg>
+                                        <span class="text-sm">11/07/2025 at 7:00 AM</span>
+                                    </div>
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                        <span class="text-sm">Toa Payoh Community Center</span>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-primary flex-1 text-sm py-2">View Details</button>
+                                    <button class="btn-outline text-sm px-4 py-2" title="Add to Calendar">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="text-accent hover:bg-accent-50 px-4 py-2 rounded-lg text-sm transition-colors duration-200" title="Cancel Enrollment">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 2 -->
+                        <div class="bg-surface rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg" alt="Pottery Workshop" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Confirmed</span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <div class="bg-white bg-opacity-90 rounded-lg px-3 py-2 text-center">
+                                        <div class="text-lg font-bold text-text-primary">5</div>
+                                        <div class="text-xs text-text-secondary">days</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-3">
+                                    <h3 class="text-lg font-heading font-semibold text-text-primary">Pottery Workshop</h3>
+                                    <span class="bg-accent-100 text-accent px-2 py-1 rounded text-xs font-medium">Arts</span>
+                                </div>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                        </svg>
+                                        <span class="text-sm">14/07/2025 at 2:00 PM</span>
+                                    </div>
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                        <span class="text-sm">Jurong West 505 Activity Center</span>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-primary flex-1 text-sm py-2">View Details</button>
+                                    <button class="btn-outline text-sm px-4 py-2" title="Add to Calendar">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="text-accent hover:bg-accent-50 px-4 py-2 rounded-lg text-sm transition-colors duration-200" title="Cancel Enrollment">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 3 -->
+                        <div class="bg-surface rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Healthy Cooking Class" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Confirmed</span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <div class="bg-white bg-opacity-90 rounded-lg px-3 py-2 text-center">
+                                        <div class="text-lg font-bold text-text-primary">8</div>
+                                        <div class="text-xs text-text-secondary">days</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-3">
+                                    <h3 class="text-lg font-heading font-semibold text-text-primary">Healthy Cooking Class</h3>
+                                    <span class="bg-warning-100 text-warning px-2 py-1 rounded text-xs font-medium">Workshop</span>
+                                </div>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                        </svg>
+                                        <span class="text-sm">17/07/2025 at 10:00 AM</span>
+                                    </div>
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                        <span class="text-sm">Bedok Wellness Hub</span>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-primary flex-1 text-sm py-2">View Details</button>
+                                    <button class="btn-outline text-sm px-4 py-2" title="Add to Calendar">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="text-accent hover:bg-accent-50 px-4 py-2 rounded-lg text-sm transition-colors duration-200" title="Cancel Enrollment">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Waitlisted Events Section -->
+                <section class="mb-12">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-heading font-bold text-text-primary">Waitlisted Events</h2>
+                        <span class="text-sm text-text-secondary">2 events</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <!-- Waitlisted Event Card -->
+                        <div class="bg-surface rounded-lg border border-border overflow-hidden shadow-sm">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Photography" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-warning text-white px-3 py-1 rounded-full text-sm font-semibold">Waitlisted #3</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-3">
+                                    <h3 class="text-lg font-heading font-semibold text-text-primary">Digital Photography</h3>
+                                    <span class="bg-warning-100 text-warning px-2 py-1 rounded text-xs font-medium">Workshop</span>
+                                </div>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                        </svg>
+                                        <span class="text-sm">20/07/2025 at 9:00 AM</span>
+                                    </div>
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                        <span class="text-sm">Ang Mo Kio Hub</span>
+                                    </div>
+                                </div>
+                                <div class="bg-warning-50 border border-warning-200 rounded-lg p-3 mb-4">
+                                    <p class="text-sm text-warning-800">You're 3rd on the waitlist. We'll notify you if a spot opens up.</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-primary flex-1 text-sm py-2">View Details</button>
+                                    <button class="text-accent hover:bg-accent-50 px-4 py-2 rounded-lg text-sm transition-colors duration-200" title="Leave Waitlist">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Past Events Section -->
+                <section>
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-heading font-bold text-text-primary">Past Events</h2>
+                        <span class="text-sm text-text-secondary">12 events</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <!-- Past Event Card -->
+                        <div class="bg-surface rounded-lg border border-border overflow-hidden shadow-sm opacity-75">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg" alt="Community Garden" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-3">
+                                    <h3 class="text-lg font-heading font-semibold text-text-primary">Community Garden Workshop</h3>
+                                    <span class="bg-secondary-100 text-secondary px-2 py-1 rounded text-xs font-medium">Workshop</span>
+                                </div>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                        </svg>
+                                        <span class="text-sm">05/07/2025 at 9:00 AM</span>
+                                    </div>
+                                    <div class="flex items-center text-text-secondary">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                        <span class="text-sm">Toa Payoh Community Center</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Rating Section -->
+                                <div class="bg-gray-50 rounded-lg p-3 mb-4">
+                                    <p class="text-sm text-text-secondary mb-2">Rate this event:</p>
+                                    <div class="flex items-center space-x-1">
+                                        <button class="text-warning hover:text-warning-600">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="text-warning hover:text-warning-600">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="text-warning hover:text-warning-600">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="text-warning hover:text-warning-600">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="text-gray-300 hover:text-warning">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </button>
+                                        <span class="text-sm text-text-secondary ml-2">4/5</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex space-x-2">
+                                    <button class="btn-primary flex-1 text-sm py-2">View Details</button>
+                                    <button class="btn-outline text-sm px-4 py-2" title="Book Similar Event">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show More Button -->
+                    <div class="text-center mt-8">
+                        <button class="btn-outline">Show More Past Events</button>
+                    </div>
+                </section>
+
+                <!-- Empty State (Hidden by default) -->
+                <div id="emptyState" class="hidden text-center py-16">
+                    <div class="max-w-md mx-auto">
+                        <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">No Events Found</h3>
+                        <p class="text-text-secondary mb-6">You haven't enrolled in any events yet. Discover exciting activities in your community!</p>
+                        <a href="event_details.html" class="btn-primary inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                            <span>Find Events</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Filters Modal -->
+    <div id="mobileFiltersModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="fixed bottom-0 left-0 right-0 bg-surface rounded-t-xl p-6 max-h-96 overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-heading font-semibold text-text-primary">Filter Events</h3>
+                <button id="closeMobileFilters" class="p-2 text-text-secondary hover:text-text-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile filter content (same as desktop) -->
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-text-primary mb-2">Date Range</label>
+                    <select class="form-input text-sm">
+                        <option>All Dates</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>Next 3 Months</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-semibold text-text-primary mb-2">Status</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="w-4 h-4 text-primary rounded" checked />
+                            <span class="ml-2 text-sm">Confirmed</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="w-4 h-4 text-primary rounded" />
+                            <span class="ml-2 text-sm">Waitlisted</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 pt-4">
+                    <button class="btn-primary flex-1">Apply Filters</button>
+                    <button class="btn-outline flex-1">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Confirmation Modal -->
+    <div id="cancelModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-surface rounded-xl p-8 max-w-md mx-4 text-center">
+            <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                </svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">Cancel Enrollment?</h3>
+            <p class="text-text-secondary mb-6">Are you sure you want to cancel your enrollment for this event? This action cannot be undone.</p>
+            <div class="flex space-x-3">
+                <button id="confirmCancel" class="btn-primary flex-1">Yes, Cancel</button>
+                <button id="cancelCancel" class="btn-outline flex-1">Keep Enrollment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileFiltersBtn = document.getElementById('mobileFiltersBtn');
+            const mobileFiltersModal = document.getElementById('mobileFiltersModal');
+            const closeMobileFilters = document.getElementById('closeMobileFilters');
+            const cancelModal = document.getElementById('cancelModal');
+            const confirmCancel = document.getElementById('confirmCancel');
+            const cancelCancel = document.getElementById('cancelCancel');
+
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Mobile filters modal
+            mobileFiltersBtn.addEventListener('click', function() {
+                mobileFiltersModal.classList.remove('hidden');
+            });
+
+            closeMobileFilters.addEventListener('click', function() {
+                mobileFiltersModal.classList.add('hidden');
+            });
+
+            // Cancel enrollment functionality
+            document.querySelectorAll('[title="Cancel Enrollment"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    cancelModal.classList.remove('hidden');
+                });
+            });
+
+            cancelCancel.addEventListener('click', function() {
+                cancelModal.classList.add('hidden');
+            });
+
+            confirmCancel.addEventListener('click', function() {
+                cancelModal.classList.add('hidden');
+                // Show success message or update UI
+                alert('Enrollment cancelled successfully');
+            });
+
+            // Voice assistant functionality
+            document.querySelector('.voice-button').addEventListener('click', function() {
+                this.style.backgroundColor = '#059669';
+                setTimeout(() => {
+                    this.style.backgroundColor = '#2563EB';
+                    alert('Voice assistant: "You have 5 upcoming events. Your next event is Morning Tai Chi on July 11th at 7:00 AM."');
+                }, 1000);
+            });
+
+            // Add to calendar functionality
+            document.querySelectorAll('[title="Add to Calendar"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('Event added to your calendar');
+                });
+            });
+
+            // Rating functionality
+            document.querySelectorAll('.text-warning, .text-gray-300').forEach(star => {
+                star.addEventListener('click', function() {
+                    alert('Thank you for rating this event!');
+                });
+            });
+
+            // Filter functionality
+            document.querySelectorAll('select, input[type="checkbox"]').forEach(filter => {
+                filter.addEventListener('change', function() {
+                    // Simulate filtering
+                    console.log('Filter applied:', this.value || this.checked);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

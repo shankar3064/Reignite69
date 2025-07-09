@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced Voice Assistant Styles */
+
+/* Voice button improvements for better accessibility */
+@layer components {
+  .voice-button-enhanced {
+    @apply voice-button relative overflow-hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .voice-button-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  
+  .voice-button-enhanced:hover::before,
+  .voice-button-enhanced:focus::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .voice-button-enhanced.listening {
+    @apply bg-green-600;
+    animation: pulse-voice 2s infinite;
+  }
+  
+  .voice-button-enhanced.speaking {
+    @apply bg-orange-500;
+    animation: speaking-wave 1s infinite;
+  }
+}
+
+/* Voice assistant status indicators */
+@layer utilities {
+  .voice-listening {
+    @apply bg-green-600 scale-105;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+  }
+  
+  .voice-speaking {
+    @apply bg-orange-500;
+    animation: speaking-pulse 1.5s infinite;
+  }
+  
+  .voice-processing {
+    @apply bg-yellow-500;
+    animation: processing-spin 1s linear infinite;
+  }
+  
+  .voice-error {
+    @apply bg-red-500;
+    animation: error-shake 0.5s ease-in-out;
+  }
+}
+
+/* Voice assistant animations */
+@keyframes pulse-voice {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes speaking-wave {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes speaking-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes processing-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes error-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Voice assistant feedback text */
+.voice-feedback {
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg z-50;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.voice-feedback.show {
+  opacity: 1;
+}
+
+/* High contrast mode for better accessibility */
+@media (prefers-contrast: high) {
+  .voice-button {
+    @apply border-2 border-white;
+  }
+}
+
+/* Reduced motion support for voice indicators */
+@media (prefers-reduced-motion: reduce) {
+  .voice-button-enhanced::before,
+  .voice-listening,
+  .voice-speaking,
+  .voice-processing {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Focus improvements for keyboard navigation */
+.voice-button:focus-visible {
+  @apply ring-4 ring-blue-300 ring-offset-2;
+  outline: none;
+}
+
+/* Large text mode compatibility */
+@media (min-resolution: 2dppx) {
+  .voice-button {
+    @apply min-w-12 min-h-12;
+  }
+}
+
+/* Voice assistant help overlay */
+.voice-help-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.voice-help-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.voice-help-content {
+  @apply bg-white rounded-xl p-8 max-w-2xl mx-4 text-center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.voice-help-overlay.show .voice-help-content {
+  transform: scale(1);
+}
+
+/* Voice command suggestions */
+.voice-suggestions {
+  @apply bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4;
+}
+
+.voice-suggestions h4 {
+  @apply text-blue-800 font-semibold mb-2;
+}
+
+.voice-suggestions ul {
+  @apply text-blue-700 text-sm space-y-1;
+}
+
+.voice-suggestions li {
+  @apply flex items-center space-x-2;
+}
+
+.voice-suggestions li::before {
+  content: "🎤";
+  @apply text-blue-500;
+}
+
+/* Senior-friendly improvements */
+.senior-voice-mode .voice-button {
+  @apply min-w-16 min-h-16 text-lg;
+}
+
+.senior-voice-mode .voice-feedback {
+  @apply text-lg px-6 py-3;
+}
+
+/* Voice assistant status bar */
+.voice-status-bar {
+  @apply fixed top-0 left-0 right-0 bg-blue-600 text-white text-center py-2 transform -translate-y-full transition-transform duration-300 z-50;
+}
+
+.voice-status-bar.show {
+  @apply translate-y-0;
+}
+
+/* Loading indicator for voice processing */
+.voice-loading {
+  @apply inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
